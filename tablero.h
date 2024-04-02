@@ -1,3 +1,4 @@
+
 #ifndef tablero_h
 #define tablero_h
 
@@ -21,7 +22,7 @@ typedef struct {
 
 
 
-void cargar(tTablero& table);
+void cargar(tTablero& table, ifstream& archivo);
 bool valida(const tTablero& table, int fila, int col);
 bool eleccionValida(const tTablero& table, int fila, int
 	col);
@@ -34,5 +35,7 @@ int numFilas(const tTablero& tablero);
 int numColumnas(const tTablero& tablero);
 void ponMeta(tTablero& tablero, int fila, int col);
 
+void fichaAleatoria(const tTablero& tablero, int& fila, int& columna);
+void reseteaTablero(tTablero& tablero, int f, int c);
 #endif
 
